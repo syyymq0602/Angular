@@ -1,0 +1,24 @@
+h2{
+    text-align: center;
+}
+.people_list{
+    width:400px;
+    margin: 70px auto;
+    padding: 20px;
+    border: 1px solid #eeeeee;
+}
+li{
+    height: 50px;
+    line-height:50px;
+}
+input.form_input{
+    width: 300px;
+    height: 26px;
+}
+button{
+    height: 30px;
+    width: 100px;
+    margin-top: 120px;
+    margin-left: 53px;
+    inline-size: 100px;
+}
