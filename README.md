@@ -32,4 +32,4 @@
     	 * `bootstrap`:指定应用的主视图
 2. 其他组件之间可以相互调用，一个根模块可以挂载多个组件。
 3. 学习在组件中如何绑定数据。
-4. 通过`*ngFor="let item of items`来循环对象。
+4. 通过`*ngFor="let item of items"`来循环对象。

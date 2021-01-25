@@ -1,0 +1,49 @@
+<h1>引入图片</h1>
+
+<img [src]="baiduurl">
+<hr />
+<h1>循环数据 显示数据的索引值</h1>
+
+<ul>
+    <li *ngFor="let item of list index as key">
+        {{key}}---{{item.title}}
+    </li>
+</ul>
+
+<h1>条件判断语句</h1>
+
+<div *ngIf="flag">
+    <img src="assets/images/12.png" alt="收藏" />
+</div>
+
+<h1>属性 [ngClass] [ngStyle]</h1>
+
+<div [ngClass]="{'blue': false,'red':true}">
+    ngClass演示
+</div>
+
+<ul>
+    <li *ngFor="let item of list index as key" [ngClass]="{'red': key%2==0,'blue':key%2!=0}">
+        {{key}}---{{item.title}}
+    </li>
+</ul>
+
+<p style="color:red">我是一个p标签</p>
+<p [ngStyle]="{'color': 'green'}">我也是一个p标签</p>
+<p [ngStyle]="{'color': attr}">我才是一个p标签</p>
+
+<h1>管道</h1>
+<p [ngStyle]="{'color': attr}">{{today | date:'yyyy-MM-dd HH:mm:ss'}}</p>
+
+<h1>事件</h1>
+<button (click)='run()'>执行事件</button>
+<button (click)='setData()'>改变颜色</button>
+<h1>表单事件</h1>
+<input type="text" (keydown)='keyDown($event)' />
+
+<h1>双向数据绑定</h1>
+<input [(ngModel)]="keywords" />
+{{keywords}}
+
+
+
