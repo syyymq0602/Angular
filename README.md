@@ -30,6 +30,20 @@
     	 * `imports`:配置当前模块运行依赖的其他模块
     	 * `providers`:配置项目所需的服务
     	 * `bootstrap`:指定应用的主视图
+    
 2. 其他组件之间可以相互调用，一个根模块可以挂载多个组件。
+
+news：
+
 3. 学习在组件中如何绑定数据。
+
 4. 通过`*ngFor="let item of items"`来循环对象。
+home：
+1. 引入图片：`src=".."`为引入静态图片，`[src]='...'`为引用动态图片
+2. 使用`*ngFor="let item of item"`循环遍历数组
+3. 使用`*ngIf="expression"`实现动态判断
+4. `[ngClass]="{'class': true}"`实现动态属性改变
+5. `[ngStyle]="{'property': expression}"`实现动态样式改变
+6. `<button (click)='run()'>`按钮点击事件
+7. `<input type="text" (keydown)='keyDown($event)' />`表单事件
+8. `<input [(ngModel)]="keywords" />`实现数据双向绑定，目前只针对于表单事件，需要在**根模块中**引入`import { FormsModule } from '@angular/forms';`，在`imports`模块中导入`FormsModule`。
