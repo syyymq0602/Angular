@@ -53,3 +53,9 @@
 	 * `<select name="city" id="city">`
 	 * `<input type="checkbox">`
 	 * `<textarea name="mark" id="mark">`
+### jingdong：
+#### search：
+仿照京东的搜索界面做了一个简单的搜索页面，主要完成了**去重**以及数组缓存的功能，以及可以对缓存进行删除。
+#### todo-list
+1. 在search项目基础上使用`[hidden]="expression"`实现项目的动态显示。
+2. 对于对象的查重只能使用`for`循环遍历，而不能使用`indexof()`来去重。
