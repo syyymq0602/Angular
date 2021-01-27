@@ -55,7 +55,14 @@
 	 * `<textarea name="mark" id="mark">`
 ### jingdong：
 #### search：
-仿照京东的搜索界面做了一个简单的搜索页面，主要完成了**去重**以及数组缓存的功能，以及可以对缓存进行删除。
+1. 仿照京东的搜索界面做了一个简单的搜索页面，主要完成了**去重**以及数组缓存的功能，以及可以对数据进行删除。
+2. 添加了本地缓存**服务**，实现数据的持久化。
 #### todo-list
 1. 在search项目基础上使用`[hidden]="expression"`实现项目的动态显示。
 2. 对于对象的查重只能使用`for`循环遍历，而不能使用`indexof()`来去重。
+3. 在`StorageService`服务中设置了3个方法来设置、读取历史数据。关于**服务**有以下注意事项：
+	+ 使用`ng g service [name1]`来创建服务。
+	+ 需要在根模块以及对应的组件中**引用服务**。
+	+ `constructor()`在**构造函数**中定义服务属性
+	+ `ngOnInit()`在**生命周期函数**中初始化本地缓存
+	+ 使用`localStorage.setItem()`代码添加本地缓存；`localStorage.getItem()`获取本地缓存；`localStorage.removeItem()`删除本地缓存。

@@ -11,13 +11,14 @@ export class TodoListComponent implements OnInit {
   public keywords:string='';
   public TodoList:any[]=[];
   constructor(public storage:StorageService) {
+   
+  }
+
+  ngOnInit() {
     let todolist:any=this.storage.get('todolist');
     if(todolist){
       this.TodoList=todolist;
     }
-  }
-
-  ngOnInit() {
   }
   doAdd(e){
     if(e.keyCode==13){
