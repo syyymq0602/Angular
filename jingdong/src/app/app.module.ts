@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './components/search/search.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 
+import { StorageService } from './services/storage.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,7 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [StorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

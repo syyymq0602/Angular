@@ -6,14 +6,14 @@
     <h3>待办事项</h3>
     <ul>    
         <li *ngFor="let item of TodoList;let key=index" [hidden]="item.status==true">
-        <input type="checkbox" [(ngModel)]="item.status" />  {{item.title}}  ---<button (click)="Del(key)">X</button>
+        <input type="checkbox" [(ngModel)]="item.status" (change)="checkboxchange()"/>  {{item.title}}  ---<button (click)="Del(key)">X</button>
         </li>
     </ul>
     <hr />
     <h3>已办事项</h3>
     <ul>    
         <li *ngFor="let item of TodoList;let key=index" [hidden]="item.status==false">
-        <input type="checkbox" [(ngModel)]="item.status" />  {{item.title}}  ---<button (click)="Del(key)">X</button>
+        <input type="checkbox" [(ngModel)]="item.status" (change)="checkboxchange()"/>  {{item.title}}  ---<button (click)="Del(key)">X</button>
         </li>
     </ul>
 </div>
