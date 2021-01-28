@@ -66,3 +66,7 @@
 	+ `constructor()`在**构造函数**中定义服务属性
 	+ `ngOnInit()`在**生命周期函数**中初始化本地缓存
 	+ 使用`localStorage.setItem()`代码添加本地缓存；`localStorage.getItem()`获取本地缓存；`localStorage.removeItem()`删除本地缓存。
+### demo03
+1. 实现了DOM侧边栏动画
+2. `ngOnInit()`函数只负责初始化指令/组件，而`ngAfterViewInit()`是在初始化完组件试图及其子视图之后再调用的，适合获取DOM节点
+3. `ViewChild`组件也可以获取DOM节点（**推荐**）
