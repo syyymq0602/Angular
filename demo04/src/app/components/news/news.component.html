@@ -1,0 +1,12 @@
+<app-footer #footer (outer)="run($event)"></app-footer>
+
+<br>
+<hr />
+
+<div>
+    我是新闻父组件
+</div>
+
+<button (click)="getChildMsg()">获取子组件的msg</button>
+
+<button (click)="getChildRun()">获取子组件的run方法</button>
