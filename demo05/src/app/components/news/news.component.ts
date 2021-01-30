@@ -28,7 +28,7 @@ export class NewsComponent implements OnInit {
     this.http.get(api).subscribe((response:any)=>{
       console.log(response);
       this.list=response.result;
-    })
+    });
   }
 
   doLogin(){
@@ -57,7 +57,6 @@ export class NewsComponent implements OnInit {
     let api:string="http://a.itying.com/api/productlist";
     this.service.axiosGet(api).then((data)=>{
       console.log(data);
-    })
+    });
   }
-
 }

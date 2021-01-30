@@ -116,3 +116,17 @@
 	- [()]：实现双向绑定
 	- []：父组件向子组件传递
 	- ()：子组件向父组件传递 
+
+### demo05
+1. demo05项目负责数据请求，用到了`HttpClientModule`以及`HttpHeaders`模块
+2. 需要在构造函数中注入`public http:HttpClient`
+	* `http`属性中的`get`方法需要传入对应API参数
+	* `http`属性中的`post`方法需要传入至少API参数以及需要传输的对象。
+3. 使用`jsonp`获取服务器数据**（需要服务器支持callback函数）**：
+	* 引入`HttpClientJsonpModule`模块
+	* 需要服务器支持`callback`函数
+	* 通过回调函数获取服务器的数据
+4. 使用第三方库`axios`获取服务器数据：
+	- 首先使用`cnpm axios --save`安装库
+	- 在对应组件中`import axios from 'axios';`引入axios模块
+	- 使用`axios.get()`函数获取服务器数据
