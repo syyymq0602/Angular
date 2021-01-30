@@ -70,3 +70,49 @@
 1. 实现了DOM侧边栏动画
 2. `ngOnInit()`函数只负责初始化指令/组件，而`ngAfterViewInit()`是在初始化完组件试图及其子视图之后再调用的，适合获取DOM节点
 3. `ViewChild`组件也可以获取DOM节点（**推荐**）
+### demo04
+1. 父子组件传值：
+	* 父传子使用`@Input`装饰器，有两种引用方法
+		- （1）@input装饰器直接使用：
+		```typescript
+		父组件：
+		<input [(ngModel)]="input"/>
+		<app-demo [demoinput]="input"></app-demo>
+		子组件：@Input() demoinput:any
+		```
+		- （2）@input通过别名去使用
+		```typescript
+		父组件：
+        <input [(ngModel)]="input"/>
+        <app-demo [testinput]="input"></app-demo>
+        子组件：
+        @Input('testinput') input
+        <input [(ngModel)]="input" (input)="change()"/>
+     ```
+	* 子传父可以使用`@Output`装饰器或者`@ViewChild`装饰器
+		+ （1）@Output装饰器调用：
+		```typescript
+		子组件：
+        @Output() output = new EventEmitter();//实例化output
+          change() {
+            this.output.emit(this.test)//回调
+          }
+        <input [(ngModel)]="test" (input)="change()"/>
+        父组件：
+        <input [(ngModel)]="input"/>
+         <app-demo [testinput]="input" (output)="test($event)" ></app-demo>
+        test(data){
+           this.input=data
+          }//通过回调赋值
+		```
+
+		+ （2）@ViewChild装饰器调用：
+		``` typescript
+		@ViewChild("childDemo",{static:true}) childDemo:any;
+		```
+		调用整个子组件
+2. 非父子组件的数据传递：使用`service`服务以及`LocalStorage`传递
+3. 总结：
+	- [()]：实现双向绑定
+	- []：父组件向子组件传递
+	- ()：子组件向父组件传递 

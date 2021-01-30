@@ -1,0 +1,38 @@
+<p>news works!</p>
+
+<button (click)="getData()">get请求数据</button>
+
+
+<ul>
+    <li *ngFor="let item of list">{{ item.title }}</li>
+</ul>
+
+<hr />
+
+<div>
+    姓 名：
+    <input type="text" [(ngModel)]="body.name">
+    <br>
+    类 型：
+    <input type="text" [(ngModel)]="body.type">
+</div>
+<br>
+<button (click)="doLogin()">post发送数据</button>
+
+
+
+<hr />
+<br>
+<ul>
+    <li>{{body.name}}</li>
+    <li>{{body.type}}</li>
+    <li>{{body.publishDate}}</li>
+    <li>{{body.price}}</li>
+    <li>{{id}}</li>
+</ul>
+
+<button (click)="getJsonpData()">通过jsonp获取服务器数据</button>
+
+<br>
+<hr />
+<button (click)="getAxiosData()">通过axios获取服务器数据</button>
