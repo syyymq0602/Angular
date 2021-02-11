@@ -130,3 +130,13 @@
 	- 首先使用`cnpm axios --save`安装库
 	- 在对应组件中`import axios from 'axios';`引入axios模块
 	- 使用`axios.get()`函数获取服务器数据
+
+### route
+1. 需要在安装过程中加入路由配置选项
+2. 需要在`app-routing.module.ts`里配置子路由以及父路由信息
+3. 动态路由以及get传值需要`import { Router,NavigationExtras } from '@angular/router';`并在构造器中声明。
+4. 使用`routerLinkActive`实现高亮
+
+### RouteParent
+1. 实现了路由嵌套功能
+2. 在根路由配置里要加入`children:[]`模块
