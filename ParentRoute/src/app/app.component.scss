@@ -1,0 +1,12 @@
+.header{
+    background: rgb(48, 88, 104);
+    height: 44px;
+    line-height: 44px;
+    a{
+        color: #fff;
+        padding: 20px;
+    }
+    a.active{
+        color: yellowgreen;
+    }
+}
